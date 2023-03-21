@@ -33,8 +33,7 @@ services:
     - "3001:3000"
     - "3002:8888"
     volumes:
-    - workspace:/workspace
-    - ~/.gitconfig:/home/developer/.gitconfig
+    - .:/workspace
     environment:
     - DISPLAY=:0
     - ROS_MASTER_URI=http://simulator:11311/
