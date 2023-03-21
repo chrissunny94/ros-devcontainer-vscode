@@ -1,3 +1,6 @@
 .env
 .vscode/ipch
-*~
+devel/*
+build/*
+logs/*
+install/*
