@@ -42,5 +42,6 @@ services:
     - simulator
     depends_on:
     - xserver
+  
 volumes:
   workspace:

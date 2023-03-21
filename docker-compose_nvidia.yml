@@ -1,0 +1,18 @@
+version: '2.3'
+services:
+  nvidia_container:
+    image: base_ubuntu_20_cuda_12:latest
+    ipc: host
+    security_opt:
+    - seccomp:unconfined
+    ports:
+    - "3001:3000"
+    - "3002:8888"
+    volumes:
+    - .:/workspace
+    environment:
+    - DISPLAY=:0
+    - ROS_MASTER_URI=http://simulator:11311/
+    entrypoint: /bin/sh
+volumes:
+  workspace:

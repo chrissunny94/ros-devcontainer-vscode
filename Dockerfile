@@ -112,5 +112,46 @@ ENV PATH="${PATH}:/usr/local/bin/ngc-cli"
 ENV LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${TRT_OSSPATH}/build/out:${TRT_LIBPATH}"
 WORKDIR /workspace
 
+#ROS1 Noetic
+RUN apt install curl
+RUN sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+RUN curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc |  apt-key add -
+RUN apt update
+RUN apt install ros-noetic-desktop-full -y
+RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+RUN source ~/.bashrc
+
+
+ENV DISPLAY ":0"
+
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update && \
+    apt-get install --no-install-recommends -y wget ca-certificates git fluxbox xfonts-base xauth x11-xkb-utils xkb-data dbus-x11 eterm python3 python3-pip supervisor && \
+    wget https://sourceforge.net/projects/tigervnc/files/stable/1.12.0/ubuntu-20.04LTS/$(dpkg --print-architecture)/tigervncserver_1.12.0-1ubuntu1_$(dpkg --print-architecture).deb && \
+    apt-get install -y ./tigervncserver_*.deb && \
+    pip3 install -U setuptools wheel && \
+    pip3 install -U git+https://github.com/devrt/websockify.git && \
+    apt-get remove -y python3-pip && \
+    apt-get autoremove -y && \
+    apt-get clean && \
+    rm tigervncserver_*.deb && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /novnc && \
+    wget -qO- "http://github.com/novnc/noVNC/tarball/master" | tar -zx --strip-components=1 -C /novnc
+
+COPY docker-xserver/. /app
+
+RUN cp /app/index.html /novnc/
+
+VOLUME /tmp/.X11-unix
+
+EXPOSE 80
+
+
+
 USER trtuser
 RUN ["/bin/bash"]
+
+CMD ["supervisord", "-c", "/app/supervisord.conf"]
