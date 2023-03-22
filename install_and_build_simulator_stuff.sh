@@ -19,6 +19,15 @@ sudo apt-get install ros-melodic-effort-* -y
 sudo apt-get install ros-melodic-position-* -y
 sudo apt-get install ros-melodic-velocity-* -y
 
+sudo apt-get install ros-kinetic-ros-control -y
+sudo apt-get install ros-kinetic-joint-state-controller -y
+sudo apt-get install ros-kinetic-effort-controllers -y
+sudo apt-get install ros-kinetic-position-controllers -y
+sudo apt-get install ros-kinetic-velocity-controllers -y
+sudo apt-get install ros-kinetic-ros-controllers -y
+sudo apt-get install ros-kinetic-gazebo-ros -y
+sudo apt-get install ros-kinetic-gazebo-ros-control -y
+
 
 source /opt/ros/melodic/setup.bash
 catkin_make
