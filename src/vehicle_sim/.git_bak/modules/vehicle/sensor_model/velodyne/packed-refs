@@ -1,0 +1,24 @@
+# pack-refs with: peeled fully-peeled sorted 
+eafa1abb28b03b2c4efe39e921c550e8a0ae08cb refs/remotes/origin/destructor_testing
+1cfa7b3bb562849271b9185f3a636bae714aadda refs/remotes/origin/foxy-devel
+0b767d5c2437e2b492a1cfb9686426fda27f82a8 refs/remotes/origin/gazebo2
+b98e156c4431210b08de679735e6fe81acc7932f refs/remotes/origin/master
+ea4d2dfe3ea165a02f1f26d4543f84f5a172347f refs/tags/0.0.2
+4492a4b7ae1f93b8dd56b9e6074d9fa0ad974a27 refs/tags/0.0.3
+0b767d5c2437e2b492a1cfb9686426fda27f82a8 refs/tags/0.0.4
+b5aa0c41f68156d0eb75d8ba02ff6ab0635c9d98 refs/tags/1.0.10
+13b12c913bac57cc028c2a29fc89dd8c602b99fe refs/tags/1.0.11
+4de0dc1002add32def7f03fb4a968def71aa860a refs/tags/1.0.12
+b98e156c4431210b08de679735e6fe81acc7932f refs/tags/1.0.13
+699d3b488769210015f6aa0f2a84b76448b35911 refs/tags/1.0.2
+b2b4496e8150c4e4082a0b8227922a721f4dc91d refs/tags/1.0.3
+d967d5a0fdacebdebcd3b24f1db1bcc70dc5c656 refs/tags/1.0.4
+8a98f493e9f9e6091c322671591e09af36151070 refs/tags/1.0.5
+3687390cde67dc97334ae4e4735995bb04e4477e refs/tags/1.0.6
+8a03c4bbc05883538b7df6408393537c54f91416 refs/tags/1.0.7
+4096f85018ab5986edce51c936abdb31f8374ef0 refs/tags/1.0.8
+506664dd478984aa6645d8210802a4a7ddc40629 refs/tags/1.0.9
+ebde74f3e34fe5cdca45ca52729649989bd04711 refs/tags/2.0.0
+884a4dc6aa011008986863b402c38f31ccc6ba11 refs/tags/2.0.1
+0086baec8174f8a5708ffa5c9c57cc7ed4f8088a refs/tags/2.0.2
+1cfa7b3bb562849271b9185f3a636bae714aadda refs/tags/2.0.3

@@ -14,6 +14,8 @@ sudo apt-get install ros-melodic-slam-gmapping -y
 sudo apt-get install ros-melodic-teleop-twist-keyboard -y
 sudo apt-get install ros-melodic-controller-manager -y
 sudo apt-get install ros-melodic-velodyne* -y
+sudo apt-get install ros-melodic-gazebo-* -y
+
 
 source /opt/ros/melodic/setup.bash
 catkin_make
