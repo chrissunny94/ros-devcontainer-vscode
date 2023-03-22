@@ -154,4 +154,4 @@ EXPOSE 80
 USER trtuser
 RUN ["/bin/bash"]
 
-CMD ["supervisord", "-c", "/app/supervisord.conf"]
+#CMD ["supervisord", "-c", "/app/supervisord.conf"]
