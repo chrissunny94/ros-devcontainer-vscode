@@ -15,6 +15,9 @@ sudo apt-get install ros-melodic-teleop-twist-keyboard -y
 sudo apt-get install ros-melodic-controller-manager -y
 sudo apt-get install ros-melodic-velodyne* -y
 sudo apt-get install ros-melodic-gazebo-* -y
+sudo apt-get install ros-melodic-effort-* -y
+sudo apt-get install ros-melodic-position-* -y
+sudo apt-get install ros-melodic-velocity-* -y
 
 
 source /opt/ros/melodic/setup.bash
