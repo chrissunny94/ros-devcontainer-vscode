@@ -24,7 +24,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: /velodyne_points
+    SyncSource: LaserScan
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -169,8 +169,8 @@ Visualization Manager:
         - Alpha: 1
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
-            Max Value: 0.34478825330734253
-            Min Value: 0.32155510783195496
+            Max Value: 0.3419496417045593
+            Min Value: 0.32336005568504333
             Value: true
           Axis: Z
           Channel Name: intensity
@@ -264,7 +264,19 @@ Visualization Manager:
           Use Fixed Frame: true
           Use rainbow: true
           Value: true
-      Enabled: true
+        - Class: jsk_rviz_plugin/BoundingBoxArray
+          Enabled: true
+          Name: BoundingBoxArray
+          Topic: /obstacle_detector/jsk_bboxes
+          Unreliable: false
+          Value: true
+          alpha: 0.800000011920929
+          color: 25; 255; 0
+          coloring: Auto
+          line width: 0.004999999888241291
+          only edge: false
+          show coords: false
+      Enabled: false
       Name: obstacle_detection
     - Class: rviz/Group
       Displays:
@@ -278,14 +290,14 @@ Visualization Manager:
           Channel Name: intensity
           Class: rviz/PointCloud2
           Color: 255; 255; 255
-          Color Transformer: ""
+          Color Transformer: Intensity
           Decay Time: 0
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
           Min Color: 0; 0; 0
           Name: PointCloud2
-          Position Transformer: ""
+          Position Transformer: XYZ
           Queue Size: 10
           Selectable: true
           Size (Pixels): 3
@@ -306,14 +318,14 @@ Visualization Manager:
           Channel Name: intensity
           Class: rviz/PointCloud2
           Color: 255; 255; 255
-          Color Transformer: ""
+          Color Transformer: Intensity
           Decay Time: 0
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
           Min Color: 0; 0; 0
           Name: PointCloud2
-          Position Transformer: ""
+          Position Transformer: XYZ
           Queue Size: 10
           Selectable: true
           Size (Pixels): 3
@@ -329,7 +341,7 @@ Visualization Manager:
           Marker Topic: /urban_road_filter/road_marker
           Name: MarkerArray
           Namespaces:
-            {}
+            "": true
           Queue Size: 100
           Value: true
         - Alpha: 1
@@ -342,14 +354,14 @@ Visualization Manager:
           Channel Name: intensity
           Class: rviz/PointCloud2
           Color: 255; 255; 255
-          Color Transformer: ""
+          Color Transformer: Intensity
           Decay Time: 0
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
           Min Color: 0; 0; 0
           Name: PointCloud2
-          Position Transformer: ""
+          Position Transformer: XYZ
           Queue Size: 10
           Selectable: true
           Size (Pixels): 3
@@ -370,14 +382,14 @@ Visualization Manager:
           Channel Name: intensity
           Class: rviz/PointCloud2
           Color: 255; 255; 255
-          Color Transformer: ""
+          Color Transformer: Intensity
           Decay Time: 0
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
           Min Color: 0; 0; 0
           Name: PointCloud2
-          Position Transformer: ""
+          Position Transformer: XYZ
           Queue Size: 10
           Selectable: true
           Size (Pixels): 3
@@ -447,5 +459,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 2560
-  X: 0
-  Y: 0
+  X: -2
+  Y: -2
