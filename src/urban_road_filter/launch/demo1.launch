@@ -1,0 +1,6 @@
+<launch>
+    <group ns="urban_road_filter">
+        <node name="urban_road_filt" pkg="urban_road_filter" type="lidar_road" output="screen">
+        </node>
+    </group>
+</launch>
