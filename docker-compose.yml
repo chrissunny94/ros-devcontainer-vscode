@@ -42,6 +42,8 @@ services:
     - simulator
     depends_on:
     - xserver
+    devices:
+    - /dev/video1:/dev/video0
   nvidia_container:
     image: christhaliyath/nvidia:latest
     ipc: host
