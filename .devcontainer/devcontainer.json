@@ -5,6 +5,7 @@
 	],
 	"service": "workspace",
 	"workspaceFolder": "/workspace",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
 	"shutdownAction": "stopCompose",
 	"extensions": [
 		"ms-vscode.cpptools",
@@ -16,4 +17,6 @@
 		"brpaz.file-templates"
     ],
     //"appPort": [80],
+	"remoteUser": "rosuser"
+
 }

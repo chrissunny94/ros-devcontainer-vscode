@@ -11,6 +11,7 @@ services:
       test: ["CMD-SHELL", "test -e /tmp/.X11-unix/X0"]
       interval: "1s"
       retries: 20
+
   simulator:
     image: devrt/simulator-empty
     ipc: host
@@ -22,9 +23,8 @@ services:
     - xserver
     depends_on:
     - xserver
+
   workspace:
-    # env_file:
-    #   - .env
     image: christhaliyath/base:latest
     ipc: host
     security_opt:
@@ -33,7 +33,7 @@ services:
     - "3001:3000"
     - "3002:8888"
     volumes:
-    - .:/workspace
+    - ../..:/workspace:cached  
     environment:
     - DISPLAY=:0
     - ROS_MASTER_URI=http://simulator:11311/
@@ -44,6 +44,8 @@ services:
     - xserver
     devices:
     - /dev/video1:/dev/video0
+    command: ["sleep", "infinity"]  
+
   nvidia_container:
     image: christhaliyath/nvidia:latest
     ipc: host
@@ -53,10 +55,8 @@ services:
     - "3001:3000"
     - "3002:8888"
     volumes:
-    - .:/workspace
+    - ../..:/workspace:cached   
     environment:
     - DISPLAY=:0
     - ROS_MASTER_URI=http://simulator:11311/
     entrypoint: /bin/bash
-volumes:
-  workspace:
