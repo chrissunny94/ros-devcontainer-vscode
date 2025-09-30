@@ -2,6 +2,9 @@
 
 - Jackal robot with 3D Lidar , Camera , Gmapping , MOVE_BASE
 
+- using technology such as Docker , Docker-compose and noVNC has allowed me to create a easy to use project that could be cloned and used .
+- Since this is dockerized , you dont need to install any additional dependencies or break your head over issues with respect to compilation and broken packages .
+
 
 
 # Preparation 

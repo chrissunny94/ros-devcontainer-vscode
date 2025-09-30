@@ -1,7 +1,7 @@
 {
 	"name": "ROS devcontainer for vscode",
 	"dockerComposeFile": [
-		"../docker-compose.yml"
+		"DOCKER/docker-compose.yml"
 	],
 	"service": "workspace",
 	"workspaceFolder": "/workspace",
