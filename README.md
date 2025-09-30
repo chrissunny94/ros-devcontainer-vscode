@@ -1,15 +1,27 @@
-In this video i am showing how to use the following packages inside a Docker-ised environment . I am running everything on a Ubuntu 20.04LTS (i5 8th Gen 4 core, 16GB ram , 8GB 1050Ti) .
-
-The docker container is build using this https://raw.githubusercontent.com/dev....
-
-https://github.com/TixiaoShan/jackal_...
-https://github.com/jkk-research/urban...
-https://github.com/SS47816/lidar_obst...
-https://github.com/yzrobot/adaptive_c...
-
-Gazebo is a good introduction to serious  robotics.
+#Clear instructions 
 
 
-#Gazebo #RVIZ #jackal #robot #Gmapping #Move_base #ros #malayalam #kerala
+Follow the instructions and install docker 
 
-https://www.youtube.com/watch?v=0o2ikfj-rUk&t=4s
+![](docs/reopen_in_container.png)
+![](docs/initializing_the_container.png)
+![](docs/pull_docker_image.png)
+
+https://docs.docker.com/engine/install/ubuntu/
+
+
+https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue
+
+
+Then use the scripts to do the respective
+
+./run_jackal_sim.sh
+
+./run_lidar_obstacle_detector.sh
+
+./run_adaptive_clustering.sh
+
+./run_urba_road_filter.sh
+
+
+
